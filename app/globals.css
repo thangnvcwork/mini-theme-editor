@@ -24,3 +24,36 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+:root {
+  /* Màu nền theo cấp độ (surface) */
+  --surface-base: #ffffff;
+  --surface-subtle: #fafafa;
+  --surface-muted: #f4f4f5;
+
+  /* Đường viền */
+  --border-subtle: #e4e4e7;
+  --border-default: #d4d4d8;
+
+  /* Chữ */
+  --text-primary: #18181b;
+  --text-secondary: #71717a;
+  --text-muted: #a1a1aa;
+
+  /* Màu nhấn (accent) - dùng cho trạng thái chọn, nút chính */
+  --accent: #2563eb;
+  --accent-subtle: #eff6ff;
+
+  /* Màu cảnh báo/xoá */
+  --danger: #dc2626;
+
+  /* Bo góc thống nhất toàn app */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+
+  /* Khoảng cách (spacing scale) - bội số của 4px */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+}
