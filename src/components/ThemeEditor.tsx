@@ -11,6 +11,7 @@ import { sectionTemplates } from "@/data/sectionTemplates";
 import { useHistoryState } from "@/hooks/useHistoryState";
 import { generateId } from "@/lib/id";
 import { ThemeEditorSkeleton } from "./ThemeEditorSkeleton";
+import { signOut } from "next-auth/react";
 
 const STORAGE_KEY = "mini-theme-editor-page";
 
@@ -352,6 +353,13 @@ export default function ThemeEditor({ initialPage, pageId }: Props) {
         >
           👁 Xem trước
         </a>
+
+        <button
+          onClick={() => signOut({ callbackUrl: "/" })}
+          className="text-sm px-3 py-1 border border-gray-300 rounded hover:bg-gray-100"
+        >
+          🚪 Đăng xuất
+        </button>
 
         {/* Nút toggle Settings - chỉ hiện trên mobile, chỉ khi có section được chọn */}
         {selectedSectionId && (
