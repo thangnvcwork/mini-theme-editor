@@ -82,7 +82,9 @@ export default function SettingsPanel({
     onUpdateBlockContent(selectedSection.id, blockId, url); // content của block giờ là URL ảnh thật
   }
 
-  function isValidImageUrl(value: string): boolean {
+  function isValidImageUrl(value?: string): boolean {
+    if (!value) return false;
+
     return (
       value.startsWith("http://") ||
       value.startsWith("https://") ||

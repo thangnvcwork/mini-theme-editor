@@ -12,8 +12,18 @@ type Props = {
   onSelect?: (id: string) => void; // thêm dấu ? — giờ là optional
 };
 
-function isValidImageUrl(value: string): boolean {
-  return value.startsWith("http://") || value.startsWith("https://") || value.startsWith("/");
+function isValidImageUrl(value: unknown): boolean {
+  console.log("isValidImageUrl:", value, typeof value);
+
+  if (typeof value !== "string") {
+    return false;
+  }
+
+  return (
+    value.startsWith("http://") ||
+    value.startsWith("https://") ||
+    value.startsWith("/")
+  );
 }
 
 export default function PagePreview({
