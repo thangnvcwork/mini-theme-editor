@@ -14,7 +14,7 @@ datasource db {
 
 model Page {
   id        String   @id
-  userId    String   // thêm dòng này
+  userId    String?   // thêm dòng này
   data      Json     // lưu nguyên object Page dạng JSON trong 1 cột
   updatedAt DateTime @updatedAt
 }
